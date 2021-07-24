@@ -58,24 +58,10 @@ def eliminate(values):
 
 
 def only_choice(values):
-    """Apply the only choice strategy to a Sudoku puzzle
+    """
 
     The only choice strategy says that if only one box in a unit allows a certain
     digit, then that box must be assigned that digit.
-
-    Parameters
-    ----------
-    values(dict)
-        a dictionary of the form {'box_name': '123456789', ...}
-
-    Returns
-    -------
-    dict
-        The values dictionary with all single-valued boxes assigned
-
-    Notes
-    -----
-    You should be able to complete this function by copying your code from the classroom
     """
     for unit in unitlist:
         for digit in '123456789':
