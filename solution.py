@@ -164,14 +164,14 @@ if __name__ == "__main__":
     answer = input("would you like to input 3x3 sudoku? (y/n)")
     if answer=='y':
         sudoku_solve=''
-        for i in len(diag_sudoku_grid):
-            print("Enter numbers as you go on sudoku bord from left to right")
-            c=input(f"Input number {i}")
+        print("Enter numbers as you go on sudoku bord from left to right")
+        for i in range(len(diag_sudoku_grid)):
+            c=input(f"Input number {i}: ")
             sudoku_solve+=''
         print("Here is the input sudoku puzzle:")
         display(convert2grid(sudoku_solve))
     else: 
-        print("Here is the input sudoku puzzle:")
+        print("Using the default generated sudoku puzzle:")
         display(convert2grid(diag_sudoku_grid))
     t0 = time.time()
     result = solve(diag_sudoku_grid)
